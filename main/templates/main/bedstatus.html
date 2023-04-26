@@ -1,0 +1,22 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block contentTitle %}
+    ipd section
+{% endblock contentTitle %}
+               
+{% block content %}           
+ 
+   <div class="container"> 
+
+    <h3><u>Bed details</u></h3> 
+
+   <h5><li><b>Bed name:</b>  {{ patient.bed_num }} </li>
+    <li> <b>Patient name</b>: {{ patient.name }} </li>
+    <li> <b>Assigned Doctor</b>: {{ patient.doctor }} </li>
+    <li> <b>Symptoms</b>: {{ patient.symptoms }} </li>
+</h5> 
+</div>
+
+
+ {% endblock content %}

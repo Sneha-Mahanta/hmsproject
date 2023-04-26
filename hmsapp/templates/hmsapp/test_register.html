@@ -1,0 +1,154 @@
+
+
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block contentTitle %}
+   Pathology Department
+{% endblock contentTitle %}
+
+{% block content %}
+<form  method="POST">
+                        
+     {% csrf_token %}
+
+     <div class="input-boxes">
+        
+         <div class="input-box" >         
+
+             <label for="patient_name">Patient Name:</label>
+         
+             <select name="patient_name" id="patient_name" class="validate" required style="width: 440px;height: 30px;">
+               
+                <option >select</option> 
+                {% for ele in patients %}  <option value='{{ele.name}}'> {{ele.name}} </option>{% endfor %}
+              
+             </select>             
+         </div>    
+                  
+         
+         <div class="input-box">
+             <label for="blood_group">Blood Group :</label>
+            
+             <select name="blood_group" id="blood_group" class="validate" required style=" width: 80px;height: 30px;">
+                 <option >select</option> 
+                 <option value='O-'>O-</option>
+                 <option value='O+'>O+</option>
+                 <option value='A-'>A-</option>
+                 <option value='A+'>A+</option>
+                 <option value='B-'>B-</option>
+                 <option value='B+'>B+</option>
+                <option value='AB-'>AB-</option>
+                <option value='AB+'>AB+</option>
+               </select>   &nbsp;   
+               &nbsp; &nbsp; &nbsp; 
+
+             <!-- <label for="sex">Sex:</label>
+             <select name="sex" id="sex" class="validate" required style="    width: 80px;height: 30px;">
+                 <option >select</option>
+                 <option value='male'>Male</option>
+                 <option value='female'>Female</option>                            
+             </select>                                -->
+             
+         </div>
+         <div class="input-box">
+             <label for="department">Department:</label>
+             <input type="text" name="department", id="department">                           
+         </div>    
+
+         <div class="input-box">
+             <label for="doctor">Test Doctor:</label>   
+             <select name="doctor" id="doctor" class="validate" required style="width: 440px;height: 30px;">
+               
+                <option >select</option> 
+                {% for ele in doctor %}  <option value='{{ele.name}}'> {{ele.name}} </option>{% endfor %}
+              
+             </select>                   
+             <div class="input-box">
+                <label for="fees">Fees:</label>
+                <input type="text" name="fees", id="fees">                           
+            </div>          
+           
+           <div class="patient-form row d-flex">
+            <div class="testcase row"> 
+            <div class="testcases-label col-12 text-center mt-0"><b>Test case</b> </div><br>
+            
+            <!-- <div class="row"> -->
+
+                <div class="common-testcases col-md-4">
+                    <label for="" class="testcase-type"> <ul> Common</ul></label><br>
+                    <div class="testcase">
+                    <input type="checkbox" name="testcase" id="fever" value="Fever" class="checkbox">
+                    <label for="fever">Fever</label><br>
+                    </div>
+
+                    <div class="testcase"> 
+                    <input type="checkbox" name="testcase" value="cough" id="cough">
+                    <label for="">Cough</label><br>
+                    </div>
+
+                    <div class="testcase">
+                    <input type="checkbox" name="testcase" value="diabetes" id="diabetes">
+                    <label for="">Diabetes</label><br>
+                    </div>
+
+                </div>
+            
+                <div class="less-common-testcases col-md-4">
+                <div>
+                    <label for="" class="testcase-type">Less Common</label><br>
+                    
+                    <div class="testcase">
+                    <input type="checkbox" name="testcase" value="hemoglobin" id="hemoglobin">
+                    <label for="">Hemoglobin</label><br>
+                    </div>
+
+                    <div class="testcase">
+                        <input type="checkbox" name="testcase" valu="vitamin" id="vitamin">
+                        <label for="">Vitamin test</label><br>
+                    </div>                      
+                      
+                    <div class="testcase">
+                    <input type="checkbox" name="testcase" valu="urin" id="urin">
+                    <label for="">Urin</label><br>
+                    </div>  
+                    
+                </div>
+                </div>
+                
+                <div class="serious-testcases col-md-4">
+                    <label for="" class="testcase-type">Serious</label><br>        
+                    <div class="testcase">
+                    <input type="checkbox" name="testcase" value="Radiology X-ray" id="radiology_Xray">
+                    <label for="">Radiology X-ray </label><br>
+                    </div>
+                    <div class="testcase"> 
+                    <input type="checkbox" name="testcase" value="MRI" id="MRI">
+                    <label for="">MRI</label><br> 
+                    </div>  
+                    <div class="testcase"> 
+                    <input type="checkbox" name="testcase" value="thyroid" id="thyroid">
+                    <label >Thyroid</label> <br>
+                    </div> 
+                </div>  
+
+            <!-- </div> -->
+
+        </div> 
+
+        </div> 
+
+         </div>       
+
+         <div class="button input-box"> 
+
+             <input class="btn btn-primary" type="submit" value="Register"> 
+
+         </div>
+         
+     </div>
+
+ </form>
+
+ {% endblock content %}
+

@@ -1,0 +1,61 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block contentTitle %}
+   testcase details list
+{% endblock contentTitle %}
+
+{% block content %}
+ 
+{% for ele in test %}
+{{ele.patient_name}}
+
+
+{% endfor %}
+
+ 
+ <div class="table-responsive mt-3">
+    <table class="table table-hover row-clickable">
+       <thead>
+
+          <tr>  
+
+             <th>Fever</th> 
+             <th>Cough</th>
+             <th>Diabetes</th>
+             <th>Hemoglobin</th>
+             <th>Vitamin test</th>
+             <th>Urin</th>
+             <th>Radiology X-ray</th>
+             <th>MRI</th>
+             <th>Thyroid</th>
+             
+
+
+          </tr> 
+          
+       </thead> 
+        
+       
+       <tbody> 
+         
+         <tr class="mx-auto"> 
+           
+           {% for ele in Fever %} <td>{{ele.patient_name}}</td> {% endfor %} 
+           {% for ele in Cough %} <td>{{ele.patient_name}}</td> {% endfor %} 
+           {% for ele in Diabetes %} <td>{{ele.patient_name}}</td> {% endfor %} 
+           {% for ele in Hemoglobin %} <td>{{ele.patient_name}}</td> {% endfor %} 
+           {% for ele in Vitamin %} <td>{{ele.patient_name}}</td> {% endfor %} 
+           {% for ele in Urin %} <td>{{ele.patient_name}}</td> {% endfor %} 
+           {% for ele in Radiology %} <td>{{ele.patient_name}}</td> {% endfor %} 
+           {% for ele in mri %} <td>{{ele.patient_name}}</td> {% endfor %} 
+           {% for ele in Thyroid %} <td>{{ele.patient_name}}</td> {% endfor %} 
+
+        </tr>                        
+                
+       </tbody> 
+       
+       
+    </table>   
+  </div>
+ {% endblock content %}

@@ -1,0 +1,28 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block contentTitle %}
+     My Profile
+{% endblock contentTitle %}
+
+{% block content %}
+
+<div class="container">      
+   
+  <ul >          
+        <li >Username: <span> {{request.user.username}} </span></li>
+        <li >Email:<span> {{request.user.email}} </span></li> 
+
+        <!-- <li >Contact:<span >{{request.user.staff.mobile_no}} </span></li>
+        <li >Address:<span >{{request.user.staff.address}} </span></li>
+        <li >Department:<span >{{request.user.staff.department}} </span></li>
+        <li >Designation:<span >{{request.user.staff.designation}} </span></li>
+        <li >employee No:<span>{{request.user.staff.emp_no}} </span></li>
+        <li >Salary:<span >{{request.user.staff.salary}} </span></li>
+        <li >Sex:<span >{{request.user.staff.sex}} </span></li>
+        -->     
+    </ul>
+  </div>
+{% endblock content %}
+
+

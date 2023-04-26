@@ -1,0 +1,78 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block contentTitle %}
+     ipd section
+{% endblock contentTitle %}
+
+{% block content %}
+<form class="form" action="" method="post" id="registrationForm">
+     {% csrf_token %}
+          <div class="container">
+               <div class="patient-form">
+                    <div class="row">
+                         <div class="offset-md-2 col-md-4 form-field mt-4 mb-0">
+                              <label for="ipd_no">IPD No</label>
+                              <input type="text" id="ipd_no" class="input-text" type="text" name="ipd_no"  value="{{patient_ipd.ipd_no}}">                           
+                          </div> 
+                         <div class="col-md-4 form-field mt-4 mb-0">
+                         <label for="patient_name"><h6>Patient Name</h6>
+                         <input type="text" id="patient_name" class="input-text" type="text" name="patient_name" placeholder="Patient_Name" value="{{patient_ipd.patient_name}}">
+                         </label>
+                         </div>
+
+                         <div class="offset-md-2 col-md-4 form-field mt-4 mb-0">
+                         <label for="blood_group" class="mb-0"><h6>Blood Group</h6>
+                         <input type="text" id="blood_group" class="input-text" type="text" name="blood_group" placeholder="Blood Group" value="{{patient_ipd.blood_group}}">
+                         </label>                         
+                         </div>
+
+                         <div class="offset-md-2 col-md-4 form-field mt-4 mb-0">
+                              <label for="department" class="mb-0"><h6>Department</h6>
+                              <input type="text" id="department" class="input-text"  name="department" placeholder="department" value="{{patient_ipd.department }}">
+                              </label>
+                         </div> 
+                         
+                         <div class="offset-md-2 col-md-4 form-field mt-4 mb-0" >
+                                   <label for="doctor" class="mb-0"><h6>Asignned Doctor</h6>
+                                   <input type="text" id="doctor" class="input-text" type="text" name="doctor"  value="{{patient_ipd.doctor}}">
+                                   </label>
+                          </div>  
+
+                         <div class="offset-md-2 col-md-4 form-field mt-4 mb-0">
+                              <label for="bed_group">Bed Group:</label>
+                              <input type="text" class="input-text" type="text" name="bed_group" id="bed_group" value="{{patient_ipd.bed_group}}">                           
+                          </div> 
+
+                          <div class="offset-md-2 col-md-4 form-field mt-4 mb-0">
+                              <label for="bed_no">Bed no:</label>
+                              <input type="text"  class="input-text" type="text" name="bed_no", id="bed_no" value="{{patient_ipd.bed_no}}">                           
+                          </div> 
+                           
+                          <div class="offset-md-2 col-md-4 form-field mt-4 mb-0">
+                              <label for="symptoms">Symptoms:</label>
+                              <input type="text" name="symptoms" class="input-text" type="text" id="symptoms" value="{{patient_ipd.symptoms}}">                           
+                          </div> 
+                          <div class="offset-md-2 col-md-4 form-field mt-4 mb-0">
+                              <label for="fees" class="mb-0"><h6>Fees</h6>
+                              <input type="text" id="fees" class="input-text" type="text" name="fees"  value="{{patient.fees}}">
+                              </label>
+                    </div>
+                    </div>
+               </div>
+          </div>
+     
+     <div class="form-group">
+          <div class="col-md-5 mx-auto">
+          <br/>
+          <button class="btn btn-lg btn-success btn-block mx-auto" type="submit">
+               <i class="glyphicon glyphicon-ok-sign"></i> Save
+          </button>
+          
+          </div>
+      </div>
+
+     </form>
+
+
+ {% endblock content %}

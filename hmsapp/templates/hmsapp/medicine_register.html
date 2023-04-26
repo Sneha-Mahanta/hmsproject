@@ -1,0 +1,64 @@
+
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block contentTitle %}
+    Pharmacy section
+{% endblock contentTitle %}
+
+{% block content %}
+
+          
+   <form  method="POST">                  
+                         
+    {% csrf_token %}                      
+                                       
+    <div class="input-boxes">            
+                 
+        <div class="input-box" >                                                                 
+            <label for="medicine_name">Medicine Name</label>   
+            <input type="text" name="medicine_name" id="medicine_name" class="validate" required>                                     
+        </div>     
+        
+        <div class="input-box"> 
+            <label for="comapny_name">Company Name:</label>  
+            <input type="text" name="comapny_name" id="comapny_name" class="validate" required>                    
+        
+        </div>
+                    
+        <div class="input-box" > 
+            <label for="medicine_category">Medicine Category :</label> 
+            <input type="text" name="medicine_category" id="medicine_category" class="validate" required>                                     
+       
+        </div> 
+                       
+        <div class="input-box" >                                                                        
+            <label for="medicine_group">Medicine Group:</label>                
+            <input type="text" name="medicine_group" id="medicine_group" class="validate" required>                                      
+        </div>                                             
+                                                                            
+        <div class="input-box">                                                                                                      
+            <label for="pack">Pack: </label>                                                                    
+            <input type="text" name="pack" id="pack" class="validate" required>                 
+        </div>  
+                         
+        <div class="input-box">                                     
+            <label for="unit_pack">Unit Pack:</label>                 
+            <input type="text" name="unit_pack" id="unit_pack" class="validate" required>                                 
+        </div>  
+             
+        <div class="form-field col-md-12">
+            <label for="rupees">Price</label>
+            <input type="text" id="rupees" class="input-text" type="text" name="rupees" placeholder="rupees">
+        </div>
+                               
+        <div class="button input-box">                                  
+            <input class="btn btn-primary" type="submit" value="Submit">     
+        </div>  
+
+    </div> 
+
+</form>
+
+ {% endblock content %}
+                   

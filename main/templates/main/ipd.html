@@ -1,0 +1,67 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block contentTitle %}
+     ipd section
+{% endblock contentTitle %}
+
+{% block content %}
+<div>
+    <a href="/ipdregister" class="btn btn-primlary "> <i class='far fa-plus-square'> </i> new </a> &nbsp; &nbsp;
+    <a href="#" class="btn btn-primlary ">   <i class='fas fa-align-justify'></i> details </a> &nbsp; &nbsp;    
+    <a href="#" class="btn btn-primlary ">   <i class="fa fa-edit"></i> edit </a> &nbsp; &nbsp;
+    <a href="#" class="btn btn-primlary ">   <i class='far fa-trash-alt'></i> delete</a> &nbsp; &nbsp;
+
+ </div> 
+
+
+ <div class="table-responsive mt-3">
+   <table class="table table-hover row-clickable">
+       <thead>
+            <th>Ipd no</th>
+            <th>Patient name</th> 
+            <!-- <th>Blood group</th> -->
+            <th>Department</th>   
+            <th>Consultant doctor</th> 
+            <th>Bed Group</th> 
+            <th>Bed no  </th> 
+            <th>Symptoms</th> 
+            <th>Fees</th>       
+       </thead>
+
+       <tbody >
+
+         {% for ele in patients %} 
+                          
+           <tr class="mx-auto" >  
+
+               <td scope="row"> <a  style="text-decoration:none; color: black;"  href="/ipddetails/{{ele.id}}"><h5>{{ele.ipd_no}}</h5></a></td>
+               <td><a  style="text-decoration:none; color: black;"  href="/ipddetails/{{ele.id}}"><h5>{{ele.patient_name}}</h5></a></td>               
+               <!-- <td><a  style="text-decoration:none; color: black;"  href="/ipddetails/{{ele.id}}"><h5>{{ele.blood_group}}</h5></a></td> -->
+               <td><a  style="text-decoration:none; color: black;"  href="/ipddetails/{{ele.id}}"><h5>{{ele.department}}</h5></a></td>
+               <td><a  style="text-decoration:none; color: black;"  href="/ipddetails/{{ele.id}}"><h5>{{ele.doctor}}</h5></a></td>
+               <td><a  style="text-decoration:none; color: black;"  href="/ipddetails/{{ele.id}}"><h5>{{ele.bed_group}}</h5></a></td>
+               <td><a  style="text-decoration:none; color: black;"  href="/ipddetails/{{ele.id}}"><h5>{{ele.bed_no}}</h5></a></td>
+               <td><a  style="text-decoration:none; color: black;"  href="/ipddetails/{{ele.id}}"><h5>{{ele.symptoms}}</h5></a></td>
+               <td><a  style="text-decoration:none; color: black;"  href="/ipddetails/{{ele.id}}"><h5>{{ele.fees}}</h5></a></td>
+
+               <!-- <td><a  href="/ipdupdate/{{ele.id}}" class="btn btn-purple"><h5>Update</h5></a></td>
+               <td><a href="/ipddelete/{{ele.id}}" class="btn btn-purple"><h5>Delete</h5></a></td> -->
+           </tr>            
+
+           {% endfor %}   
+
+       </tbody>
+
+   </table>
+
+   </div>         
+
+ {% endblock content %}             
+             
+              
+
+
+
+                         
+                           

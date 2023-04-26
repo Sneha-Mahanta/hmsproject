@@ -1,0 +1,68 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block contentTitle %}
+     Pharmacy section
+{% endblock contentTitle %}
+
+{% block content %}
+<form class="form" action="" method="post" id="registrationForm">
+     {% csrf_token %}
+          <div class="container">
+               <div class="patient-form">
+                    <div class="row">
+                         <div class="col-md-4 form-field mt-4 mb-0">
+                         <label for="medicine_name"><h6>Medicine Name</h6>
+                         <input type="text" id="medicine_name" class="input-text" type="text" name="medicine_name"  value="{{patient.medicine_name}}">
+                         </label>
+                         </div>
+
+                         <div class="offset-md-2 col-md-4 form-field mt-4 mb-0">
+                         <label for="comapny_name" class="mb-0"><h6>Company Name</h6>
+                         <input type="text" id="comapny_name" class="input-text" type="text" name="comapny_name"  value="{{patient.comapny_name}}">
+                         </label>
+                         </div>
+
+                         <div class="form-field mt-4">
+                         <label for="medicine_category" class="mb-0"><h6>Medicine Category</h6>
+                         <input
+                              type="text"
+                              class="input-text"
+                              name="medicine_category"
+                              id="medicine_category"
+                              value="{{patient.medicine_category}}"
+                              />
+                         </label>
+                         </div>
+                         <div class="offset-md-2 col-md-4 form-field mt-4 mb-0">
+                              <label for="medicine_group" class="mb-0"><h6>Medicine Group</h6>
+                              <input type="text" id="medicine_group" class="input-text"  name="medicine_group"  value="{{patient.medicine_group }}">
+                              </label>
+                         </div>                
+
+                         <div class="offset-md-2 col-md-4 form-field mt-4 mb-0">
+                                   <label for="pack" class="mb-0"><h6>Pack</h6>
+                                   <input type="text" id="pack" class="input-text" type="text" name="pack"  value="{{patient.pack}}">
+                                </label>
+                         </div>  
+                         <div class="offset-md-2 col-md-4 form-field mt-4 mb-0">
+                            <label for="unit_pack" class="mb-0"><h6>Unit Pack</h6>
+                            <input type="text" id="unit_pack" class="input-text" type="text" name="unit_pack"  value="{{patient.unit_pack}}">
+                         </label>
+                  </div>  
+                    </div>
+               </div>
+          </div>
+     
+     <div class="form-group">
+          <div class="col-md-5 mx-auto">
+          <br />
+          <button class="btn btn-lg btn-success btn-block mx-auto" type="submit">
+               <i class="glyphicon glyphicon-ok-sign"></i> Save
+     </button>
+          
+      </div>
+      </div>
+      </form>
+
+ {% endblock content %}

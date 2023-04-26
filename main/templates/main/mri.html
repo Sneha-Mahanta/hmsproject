@@ -1,0 +1,16 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+
+{% block contentTitle %}
+    mri details 
+{% endblock contentTitle %}
+      
+       
+{% block content %}    
+
+<b> Patient name: </b> {% for ele in mri %} <li> {{ele.patient_name}} </li>
+
+{% endfor %}
+
+{% endblock content %} 

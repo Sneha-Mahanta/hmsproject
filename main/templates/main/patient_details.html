@@ -1,0 +1,57 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block contentTitle %}
+     Patient details
+{% endblock contentTitle %} 
+
+{% block content %} 
+<a href=""></a> 
+<div class="table-responsive mt-3"> 
+    <table class="table table-hover">
+        <thead>      
+            <th>Name</th>
+            <th>Phone no</th>
+            <th>Patient relatives</th>
+            <th>Patient relatives contact</th>
+            <th>Address</th>
+            <th>Symptoms</th>
+            <th>Prior_ailments</th>
+            <th>Bed no</th>
+            <th>Dob</th>
+            <th>Doctor</th>
+            <th>Doctors note</th>
+            <th>Doctors visiting time</th>
+            <th>Status</th>
+           
+        </thead>
+
+        <tbody>
+            {% for patient in patients %}
+
+            <tr class="mx-auto">
+                <td scope="row"><h5>{{ patient.name }}</h5></td>
+                <td>{{ patient.phone_num }}</td>
+                <td>{{ patient.patient_relative_name }}</td>
+                <td>{{ patient.patient_relative_contact }}</td>
+                <td>{{ patient.address }}</td>
+                <td>{{ patient.symptoms }}</td>
+                <td>{{ patient.prior_ailments }}</td>
+                <td>{{ patient.bed_num }}</td>
+                <td>{{ patient.dob }}</td>
+                <td>{{ patient.doctor }}</td>
+                <td>{{ patient.doctors_notes }}</td>
+                <td>{{ patient.doctors_visiting_time }}</td>
+                <td>{{ patient.status }}</td>
+
+                
+            </tr>
+
+            {% endfor %}
+            
+        </tbody>
+    </table>
+
+</div>
+
+ {% endblock content %}

@@ -1,0 +1,43 @@
+.testcases-label{
+    margin: 50px 0 0px 0;
+    font-size: 23px;
+    line-height: 1em;
+    font-weight: 400;
+    color: #5543ca;
+    cursor: text;
+}
+
+.testcases{
+    margin: 0px 0;
+}
+
+.testcases .testcase-type{
+    margin: 20px 0;
+    font-size: 20px;
+    font-weight: 300;
+    color: #5543ca;
+    cursor: text;
+}
+.testcases .testcase{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.testcases .testcase > input{
+    width: 20px;
+    height: 20px;
+    margin: 10px 10px;
+}
+
+.testcases .testcase > label{
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* -------------- */
+/* grid box style */
+.grid-box{
+    border-radius: 1px;
+}
+
+

@@ -1,0 +1,50 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block contentTitle %}
+    Pathology Department
+{% endblock contentTitle %}
+
+{% block content %}
+
+<div>
+
+    <a href="/testregister" class="btn btn-primlary "> <i class='far fa-plus-square'> </i> new </a> &nbsp; &nbsp;
+    <a href="/alltestcase" class="btn btn-primlary ">   <i class='fas fa-align-justify'></i> details </a> &nbsp; &nbsp;    
+    <a href="#" class="btn btn-primlary ">   <i class="fa fa-edit"></i> edit </a> &nbsp; &nbsp;
+    <a href="#" class="btn btn-primlary ">   <i class='far fa-trash-alt'></i> delete</a> &nbsp; &nbsp;
+
+ </div> 
+ 
+ <div class="table-responsive mt-3">                            
+    <table class="table table-hover row-clickable">           
+       <thead>
+
+          <tr>  
+             <th>Patient name</th> 
+             <th>Test</th>             
+             <th>Fees</th> 
+          </tr>           
+       </thead> 
+        
+       
+       <tbody>                    
+         
+         {% for ele in test  %}                           
+         <tr class="mx-auto">                          
+             <td scope="row"> <a  style="text-decoration:none; color: black;" href="/testdetails/{{ele.id}}"> <h5>{{ele.patient_name}} </h5></a></td>
+             
+             <td><a  style="text-decoration:none; color: black;"  href="/alltestcase/{{ele.testcase}}"><h5>{{ ele.testcase }}</h5></a></td>
+             
+             <td><a  style="text-decoration:none; color: black;"  href="#"><h5>{{ ele.fees }}</h5></a></td>
+<!--         <td><a  href="/testdelete/{{ele.id}}" class="btn btn-purple"><h5>Delete</h5></a></td>
+             <td><a  href="/testupdate/{{ele.id}}" class="btn btn-purple"><h5>Update</h5></a></td> -->
+            {% endfor %}     
+        </tr>                        
+                
+       </tbody> 
+       
+       
+    </table>   
+  </div>
+ {% endblock content %}

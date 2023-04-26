@@ -1,0 +1,110 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block contentTitle %}
+     patient details 
+{% endblock contentTitle %}
+
+{% block content %} 
+
+<div class="table-responsive mt-3">
+     <table class="table table-hover" border="2">
+
+         <!-- <thead>
+
+             <th>Name</th>
+             <th>Phone no</th>
+             <th>Patient relatives</th>
+             <th>Patient relatives contact</th>
+             <th>Address</th>
+             <th>Symptoms</th>
+             <th>Prior_ailments</th>
+             <th>Bed no</th>
+             <th>Dob</th>
+             <th>Doctor</th>
+             <th>Doctors note</th>
+             <th>Doctors visiting time</th>
+             <th>Status</th>
+            
+         </thead> -->
+ 
+        
+         <tbody>             
+ 
+             <tr class="mx-auto">
+                <th>Name:</th>
+                 <td ><h5>{{ patient.name }}</h5></td>
+              </tr>  
+              <tr><th>Phone no</th><td>{{ patient.phone_num }}</td></tr> 
+                 
+
+                 <tr>
+                    <th>Patient relatives</th>
+                    <td>{{ patient.patient_relative_name }}</td></tr>
+                 <tr>
+                    <th>Patient relatives contact</th>
+                    <td>{{ patient.patient_relative_contact }}</td></tr>
+                 <tr> <th>Address</th>
+                    <td>{{ patient.address }}</td></tr>
+                 <tr>
+                    <th>Symptoms</th>
+                    <td>{{ patient.symptoms }}</td>
+                  </tr>
+                 <tr><th>Prior_ailments</th>
+                    <td>{{ patient.prior_ailments }}</td>
+                  </tr>
+                 <tr><th>Bed no</th>
+                    <td>{{ patient.bed_num }}</td>
+                  </tr>
+                 <tr>
+                    <th>Dob</th>
+                    <td>{{ patient.dob }}</td>
+                  </tr>
+                 <tr>
+                    <th>Doctor</th>
+                    <td>{{ patient.doctor }}</td>
+                  </tr>
+                 <tr><th>Doctors note</th>
+                    <td>{{ patient.doctors_notes }}</td>
+                  </tr>
+                 <tr>
+                    <th>Doctors visiting time</th>
+                    <td>{{ patient.doctors_visiting_time }}</td>
+                  </tr>
+                 <tr> <th>Status</th>
+                    <td>{{ patient.status }}</td>
+                  </tr>
+ 
+           
+             <tr>
+               <th>Fees</th>  
+               <td> <h5>{{patient.fees}}</h5></a></td>
+           </tr>
+           
+             
+         </tbody>
+     </table>
+    
+ 
+ </div>
+ 
+ 
+ 
+
+
+<!-- 
+<li><b>Name:</b> {{ patient.name }}</li>
+<li><b>Phone no:</b>{{patient.phone_num}}</li>
+<li><b>Patient relatives:</b>{{patient.patient_relative_name}}</li>
+<li><b>Patient relatives contact:</b>{{patient.patient_relative_contact}}</li>
+<li><b>Address:</b>{{patient.address}}</li>
+<li><b>Symptoms:</b>{{patient.symptoms}}</li>
+<li><b>Prior_ailments:</b>{{patient.prior_ailments}}</li>
+<li><b>Bed no:</b>{{patient.bed_num}}</li>
+<li><b>Dob:</b>{{patient.dob}}</li>
+<li><b>Doctor:</b>{{patient.doctor}}</li>
+<li><b>Doctors note:</b>{{patient.doctors_notes}}</li>
+<li><b>Doctors visiting time:</b>{{patient.doctors_visiting_time}}</li>
+<li><b>Status:</b>{{patient.status}}</li>  -->
+
+{% endblock content %}

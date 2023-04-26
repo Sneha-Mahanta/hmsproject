@@ -1,0 +1,74 @@
+
+
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block contentTitle %}
+   Pathology Department
+{% endblock contentTitle %}
+
+{% block content %}
+<form class="form" action="" method="post" id="registrationForm">
+    {% csrf_token %} 
+         <div class="container">
+              <div class="patient-form">
+                   <div class="row">
+                        <div class="col-md-4 form-field mt-4 mb-0">
+                        <label for="patient_name"><h6>Patient Name</h6>
+                        <input type="text" id="patient_name" class="input-text" type="text" name="patient_name" placeholder="Patient_Name" value="{{test.patient_name}}">
+                        </label> 
+                        </div>
+
+                        <div class="offset-md-2 col-md-4 form-field mt-4 mb-0">
+                        <label for="blood_group" class="mb-0"><h6>Blood Group</h6>
+                        <input type="text" id="blood_group" class="input-text" type="text" name="blood_group" placeholder="Blood Group" value="{{test.blood_group}}">
+                        </label>
+                        </div>
+
+                        <div class="form-field mt-4">
+                        <label for="sex" class="mb-0"><h6>Gender Name</h6>
+                        <input
+                             type="text"
+                             class="input-text"
+                             name="sex"
+                             id="sex"
+                             value="{{test.sex}}"
+                             />
+                        </label>
+                        </div>
+                        <div class="offset-md-2 col-md-4 form-field mt-4 mb-0">
+                             <label for="department" class="mb-0"><h6>Department</h6>
+                             <input type="text" id="department" class="input-text"  name="department" placeholder="department" value="{{test.department }}">
+                             </label>
+                        </div>                
+
+                        <div class="offset-md-2 col-md-4 form-field mt-4 mb-0">
+                                  <label for="doctor" class="mb-0"><h6>Asignned Doctor</h6>
+                                  <input type="text" id="doctor" class="input-text" type="text" name="doctor"  value="{{test.doctor}}">
+                                  </label>
+                        </div>
+                        
+                        <div class="offset-md-2 col-md-4 form-field mt-4 mb-0">
+                            <label for="asigned_doctor" class="mb-0"><h6>Test case</h6>
+                            <input type="text" id="testcase" class="input-text" type="text" name="testcase"  value="{{test.testcase}}">
+                            </label>
+                  </div>
+                   </div>
+              </div>
+         </div>
+    
+    <div class="form-group">
+         <div class="col-md-5 mx-auto">
+         <br />
+         <button class="btn btn-lg btn-success btn-block mx-auto" type="submit">
+              <i class="glyphicon glyphicon-ok-sign"></i> Save
+    </button>
+         
+     </div>
+     </div>
+     </form>
+
+
+
+ {% endblock content %}
+

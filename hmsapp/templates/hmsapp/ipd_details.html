@@ -1,0 +1,47 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block contentTitle %}
+     patient details 
+{% endblock contentTitle %}
+
+{% block content %} 
+<table class="table table-hover" border="2">
+     <tr>
+          <th>Ipd no:</th>
+          <td>{{patient_ipd.ipd_no}}</td>
+     </tr>
+     <tr>
+          <th>Patient Name:</th>
+          <td>{{ patient_ipd.patient_name }}</td>
+     </tr>
+     <tr>
+          <th>Blood group:</th>
+          <td>{{patient_ipd.blood_group}}</td>
+     </tr>
+     <tr>
+          <th>Department:</th>
+          <td>{{patient_ipd.department}}</td>
+     </tr>
+
+     <tr>
+          <th>Doctor:</th>
+          <td>{{patient_ipd.doctor}}</td>
+     </tr>
+     <tr>
+          <th>Bed Group:</th>
+          <td>{{patient_ipd.bed_group}}</td>
+     </tr>
+     <tr>
+          <th>Bed no:</th>
+          <td>{{ patient_ipd.bed_no }}</td>
+     </tr>
+     <tr>
+          <th>Symptoms:</th>
+          <td>{{ patient_ipd.symptoms }}</td>
+     </tr>
+
+</table>
+
+
+{% endblock content %}

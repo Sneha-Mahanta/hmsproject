@@ -1,0 +1,54 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block contentTitle %}  
+     patient details  
+{% endblock contentTitle %} 
+
+{% block content %}  
+
+<table class="table table-hover" border="3"> 
+
+     <tr> 
+          <th>Name:</th>
+          <td>{{ test.patient_name }}</td>
+     </tr> 
+
+     <tr> 
+          <th>Blood group:</th>
+          <td>{{test.blood_group}}</td>
+     </tr>
+
+     <tr>
+          <th>Department:</th>
+          <td>{{test.department}}</td> 
+     </tr> 
+
+     <tr>                   
+          <th>Doctor:</th>
+          <td>{{test.doctor}}</td>
+     </tr>   
+
+     <tr>                                                 
+          <th>Testcase:</th>
+          <td>{{test.testcase}}</td>
+     </tr> 
+
+      <tr> 
+          <th>Fees</th>  
+          <td> <h5>{{test.fees}}</h5></a></td>
+      </tr> 
+      <tr>
+          <th>total</th>
+          <td>{{total}}</td>
+      </tr>
+      <!-- <tr>  -->
+          <!-- <th>Actions</th> -->
+          <!-- <td><a  href="/testdelete/{{ele.id}}" class="btn btn-purple"><h5>Delete</h5></a> -->
+     <!-- <a  href="/testupdate/{{ele.id}}" class="btn btn-purple"><h5>Update</h5></a></td> -->
+       <!-- <td><a  href="/billpage" class="btn btn-purple"><h5>bill</h5></a></td></td> -->
+
+      <!-- </tr> -->
+</table> 
+
+{% endblock content %}

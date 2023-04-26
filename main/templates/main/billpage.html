@@ -1,0 +1,48 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block contentTitle %}
+   <h3> your bill receipt </h3>
+   
+{% endblock contentTitle %}
+
+{% block content %}
+<table class="table table-hover" border="3"> 
+
+    <tr> 
+         <th>Name:</th>
+         <td></td>
+    </tr> 
+    <tr> 
+         <th>registration fees</th>
+         <td></td>
+    </tr>
+
+    <tr>
+         <th>opd fees</th>
+         <td></td> 
+    </tr> 
+
+    <tr>                   
+         <th>ipd fees</th>
+         <td></td>
+    </tr>   
+
+    <tr>                                                 
+         <th>Test charges:</th>
+         <td></td>
+    </tr> 
+
+     <tr> 
+         <th> medicine charges</th>  
+         <td> <h5>  </h5></a></td>
+     </tr> 
+
+     <tr>
+         <th>total bill</th>
+         <td>{{total}}</td>
+     </tr>
+
+</table>
+     
+{% endblock content %}

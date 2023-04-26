@@ -1,0 +1,28 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block contentTitle %}
+   <h3> Beds Availability</h3>
+   
+{% endblock contentTitle %}
+
+{% block content %}
+<div>
+    <h3 class="font-weight-bold my-3">Beds Status</h3></div>
+        <div class="row">
+            <!-- .bg-success.grid-box.my-2.mx-2  -->
+            {% comment %} <div class="bg-success grid-box my-2 mx-2 py-3 px-3"> {% endcomment %}
+            {% comment %} </div> {% endcomment %}
+
+            {% for bed in beds %}
+                <div class="                
+                
+                {% if bed.occupied == True %}
+                bg-danger 
+                {% elif bed.occupied == False %}
+                bg-success
+                {% endif %}               
+                
+                grid-box my-2 mx-2 py-3 px-3 text-white">{{ bed }}</div>
+            {% endfor %}
+{% endblock content %}

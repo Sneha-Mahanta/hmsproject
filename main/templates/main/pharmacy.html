@@ -1,0 +1,54 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block contentTitle %}
+    Pharmacy Department
+{% endblock contentTitle %}
+
+{% block content %}
+<div>
+    <a href="/medicineregister" class="btn btn-primlary "> <i class='far fa-plus-square'> </i> new </a> &nbsp; &nbsp;
+    <a href="#" class="btn btn-primlary ">   <i class='fas fa-align-justify'></i> details </a> &nbsp; &nbsp;    
+    <a href="#" class="btn btn-primlary ">   <i class="fa fa-edit"></i> edit </a> &nbsp; &nbsp;
+    <a href="#" class="btn btn-primlary ">   <i class='far fa-trash-alt'></i> delete</a> &nbsp; &nbsp;
+
+ </div>  
+ 
+ <div class="table-responsive mt-3">
+    <table class="table table-hover row-clickable">
+       <thead>
+
+          <tr>  
+             <th>Medicine Name</th> 
+             <th>Company Name</th>
+             <th>Medicine Category</th>
+             <!-- <th>Medicine Group</th>
+             <th>Pack</th> 
+             <th>Unit Pack</th>  -->
+             <th>Actions</th> 
+          </tr>           
+       </thead> 
+               
+       <tbody> 
+         {% for ele in medicine %} 
+
+         <tr class="mx-auto" > 
+
+            <td scope="row"> <a  style="text-decoration:none; color: black;" href="/medicinedetails/{{ele.id}}"><h5> {{ele.medicine_name}} </h5></a></td>
+            <td> <a  style="text-decoration:none; color: black;"  href="/medicinedetails/{{ele.id}}"><h5>{{ ele.comapny_name }}</h5></a></td>
+            <td> <a  style="text-decoration:none; color: black;"  href="/medicinedetails/{{ele.id}}"><h5>{{ ele.medicine_category }}</h5></a></td>
+            <!-- <td><a  style="text-decoration:none; color: black;"  href="/medicinedetails/{{ele.id}}"><h5>{{ ele.medicine_group }}</h5></a></td>
+            <td><a  style="text-decoration:none; color: black;"  href="/medicinedetails/{{ele.id}}"><h5>{{ ele.pack }}</h5></a></td>
+            <td><a  style="text-decoration:none; color: black;"  href="/medicinedetails/{{ele.id}}"><h5>{{ ele.unit_pack }}</h5></a></td> -->
+            <td><a  href="/delete_medicine/{{ele.id}}" class="btn btn-purple"><h5>Delete</h5></a></td>  
+            <td><a  href="/medicineupdate/{{ele.id}}" class="btn btn-purple"><h5>Update</h5></a></td>   
+            {% endfor %}                                            
+
+        </tr>    
+
+       </tbody>  
+       
+    </table>   
+
+  </div>
+ {% endblock content %}

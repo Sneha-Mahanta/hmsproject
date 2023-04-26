@@ -1,0 +1,170 @@
+body {
+    background: url("https://www.hanmak.co.ke/wp-content/uploads/2018/12/Hospital-Management-Computer-with-Software.jpg");
+
+   min-height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   /* background: blue; */
+   background-repeat: no-repeat;
+   background-size: cover;
+   padding: 30px;
+
+}
+
+.container {
+   position: relative;
+   max-width: 723px;
+   width: 100%;
+   background: #fff;
+   padding: 40px 30px;
+   box-shadow: 0 0 30px rgb(214 215 216 / 60%);
+
+   perspective: 2700px;
+}
+
+.container .forms {
+   height: 100%;
+   width: 100%;
+   background: #fff;
+}
+
+.container .form-content {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.dn {
+   text-align: center;
+}
+
+.dn img {
+   width: 50%;
+   margin-bottom: 25px;
+   box-shadow: 10px 5px 5px rgb(20, 145, 228);
+
+}
+
+
+.form-content .signup-form {
+   width: 74%;
+   margin-left: 74px;
+}
+
+.forms .form-content .title {
+   position: relative;
+   font-size: 24px;
+   font-weight: 500;
+   color: #333;
+}
+
+.forms .form-content .title:before {
+   content: '';
+   position: absolute;
+   left: 0;
+   bottom: 0;
+   height: 3px;
+   width: 25px;
+   background: blue;
+}
+
+.forms .signup-form .title:before {
+   width: 20px;
+}
+
+.forms .form-content .input-boxes {
+   margin-top: 30px;
+}
+
+.forms .form-content .input-box {
+   display: flex;
+   align-items: center;
+   height: 40px;
+   width: 30;
+   margin: 22px 0;
+   position: relative;
+}
+
+.form-content .input-box input {
+   height: 80%;
+   width: 100%;
+   border-radius: 5px;
+   border: 1px solid #aaa;
+   padding: 0 50px;
+   margin: 8px 0;
+   font-size: 14px;
+   font-weight: 500;
+   margin-left: 3px;
+   transition: all 0.3s ease;
+
+}
+
+.form-content .input-box i {
+   position: absolute;
+   color: blue;
+   font-size: 17px;
+   margin-left: 20px;
+}
+
+.forms .form-content .text {
+   font-size: 14px;
+   font-weight: 500;
+   color: #333;
+}
+
+.forms .form-content .text a {
+   text-decoration: none;
+}
+
+.forms .form-content .text a:hover {
+   text-decoration: underline;
+}
+
+.forms .form-content .button {
+   color: #fff;
+   margin-top: 40px;
+}
+
+.forms .form-content .button input {
+   color: #fff;
+   background: blue;
+   border-radius: 6px;
+   padding: 0;
+   cursor: pointer;
+   transition: all 0.4s ease;
+}
+
+.forms .form-content .button input:hover {
+   background: red;
+}
+
+.forms .form-content label {
+   color: blue;
+   cursor: pointer;
+}
+
+.forms .form-content label:hover {
+   text-decoration: underline;
+}
+
+
+.forms .form-content .sign-up-text {
+   text-align: center;
+   margin-top: 25px;
+}
+
+
+@media (max-width: 730px) {
+
+
+   .form-content .signup-form {
+       width: 100%;
+   }
+
+   .form-content .signup-form {
+       display: none;
+   }
+
+
+}

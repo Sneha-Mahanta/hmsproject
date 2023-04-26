@@ -1,0 +1,59 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+
+{% block contentTitle %}
+     medicine details  &nbsp; &nbsp;&nbsp;
+
+     <td><a  href="/delete_medicine/{{medicine.id}}" class="btn btn-purple"><h5>Delete</h5></a></td>
+     <td><a  href="/medicineupdate/{{ele.id}}" class="btn btn-purple"><h5>Update</h5></a></td>   
+
+{% endblock contentTitle %}
+
+{% block content %} 
+
+<table class="table table-hover" border="2"> 
+    
+     <tr>
+          <th>Medicine name</th>
+          <td>{{ medicine.medicine_name }}</td> 
+
+     </tr>
+    
+     <tr>
+          <th>Comapny name</th>
+          <td>{{medicine.comapny_name}}</td>
+          
+     </tr> 
+     
+     <tr>
+          <th>Medicine category</th>
+          <td>{{medicine.medicine_category}}</td>
+     </tr>
+     
+     <tr>          
+          <th>Medicine group:</th>
+          <td>{{medicine.medicine_group}}</td>
+     </tr> 
+     
+     <tr>
+          <th>pack </th>
+          <td>{{medicine.pack}}</td>
+     </tr> 
+     
+     <tr> 
+          <th>Unit pack</th>
+          <td>{{medicine.unit_pack}}</td>
+     </tr>
+     
+     <tr> 
+          <th>Price</th>
+          <td>{{medicine.rupees}}</td>
+                         
+     </tr>
+
+
+</table> 
+
+
+{% endblock content %}

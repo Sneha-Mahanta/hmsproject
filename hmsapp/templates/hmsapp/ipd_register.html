@@ -1,0 +1,105 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block contentTitle %}
+     ipd section
+{% endblock contentTitle %}
+
+{% block content %}
+
+<div class="container">                                                                
+               
+      <form  method="POST"> 
+                     
+             {% csrf_token %} 
+                   
+                     <div class="input-boxes">
+
+                     <div class="input-box">
+                             <label for="ipd_no">IPD No:</label>
+                             <input type="text" name="ipd_no" id="ipd_no" class="validate" required>                                 
+                         </div> 
+                        
+                         <div class="input-box" >                            
+
+                             <label for="patient_name">Patient Name:</label>     
+                         
+                             <select name="patient_name" id="patient_name" class="validate" required style="    width: 440px;height: 30px;">
+                                 <option >select</option> 
+                                 {% for ele in patients %}  <option value='{{ele.name}}'> {{ele.name}} </option>{% endfor %}
+                               
+                             </select>                                
+                         </div>                     
+                         
+                        
+                         <div class="input-box">
+                             <label for="blood_group">Blood Group :</label>
+                            
+                             <select name="blood_group" id="blood_group" class="validate" required style="    width: 80px;height: 30px;">
+                                 <option >select</option>           
+                                 <option value='O-'> O-    </option>
+                                 <option value='O+'> O+    </option>
+                                 <option value='A-'> A-    </option>
+                                 <option value='A+'> A+    </option>
+                                 <option value='B-'> B-    </option> 
+                                 <option value='B+'> B+    </option> 
+                                 <option value='AB-'> AB-  </option> 
+                                 <option value='AB+'> AB+  </option> 
+
+                             </select>   &nbsp;                                        
+                                                            
+                             &nbsp; &nbsp; &nbsp;                    
+
+                         </div>                         
+
+                         <div class="input-box">                  
+                             <label for="department">Department: </label>
+                             <input type="text" name="department", id="department">               
+                         </div>    
+
+
+                         <div class="input-box">
+                             <label for="doctor">Consultant Doctor:</label>
+                             <select name="doctor" id="doctor" class="validate" required style="    width: 440px;height: 30px;">
+                              <option >select</option>
+                              {% for ele in doctor %}  <option value='{{ele.name}}'> {{ele.name}} </option>{% endfor %}
+                          
+                          </select>                                    
+                         </div>                        
+
+                         <div class="input-box">
+                             <label for="bed_group">Bed Group:</label>
+                             <input type="text" name="bed_group" id="bed_group" class="validate" required>                                 
+                         </div> 
+
+                         <div class="input-box">         
+                             <label for="bed_no">Bed No:</label>   
+                             <select name="bed_no" id="bed_no" class="validate" required style="    width: 440px;height: 30px;">
+                              <option >select</option> 
+                              {% for bed in beds %}  <option value='{{ bed }}'> {{ bed }} </option>{% endfor %}
+                          
+                         </select>   
+
+                         </div> 
+                         
+                         <div class="input-box"> 
+                             <label for="symptoms">Symptoms:</label> 
+                             <select name="symptoms" id="symptoms" class="validate" required style="    width: 440px;height: 30px;">
+                              <option >select</option>  
+                              {% for patient in patients %}  <option value='{{ patient.symptoms }}'> {{ patient.symptoms }} </option>{% endfor %}                            
+                          </select>   
+                         </div> 
+
+                         <div class="input-box"> 
+                            <label for="fees">Fees:</label>    
+                            <input type="text" name="fees" id="fees" class="validate" required>
+                         
+                         <div class="button input-box">
+                             <input class="btn btn-primary" type="submit" value="Register">
+                         </div>                           
+                         
+                     </div> 
+
+                 </form>
+             </div>
+ {% endblock content %} 

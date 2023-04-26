@@ -1,0 +1,67 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block contentTitle %}
+     patient details   
+       
+        
+{% endblock contentTitle %} 
+    
+{% block content %} 
+
+<div class="table-responsive mt-3">
+
+     <table class="table table-hover" border="2">
+    
+         <tbody >          
+  
+             <tr class="mx-auto" > 
+               <th>Patient name</th>   
+              <td> <h5>{{patient.patient_name }}</h5></a></td>
+             </tr> 
+              
+              <tr> 
+               <th>Blood group</th>   
+               <td> <h5> {{patient.blood_group}} </h5></a></td>
+             </tr> 
+                                    
+               <tr> 
+                    <th>sex</th>    
+                    <td> <h5> {{patient.sex}} </h5></a></td> 
+                </tr>    
+                   
+                 <tr>                          
+                      <th>Department</th>       
+                      <td><h5>{{patient.department}}</h5></a></td> 
+                </tr>           
+                                             
+                 <tr>       
+                     <th>Consultant doctor</th>  
+                     <td> <h5>{{patient.asigned_doctor}}</h5></a></td>
+                </tr>                                                                                           
+
+                <tr>                                                                                                         
+                    <th>Fees</th>                            
+                    <td> <h5>{{patient.fees}}</h5></a></td>            
+                </tr>                                
+                <tr> 
+
+                <th> Actions </th>    
+                           
+                        <td> <a href="/opdupdate/{{ele.id}}" class="btn btn-purple"> <h5>Update</h5> </a> 
+                          <a href="/opddelete/{{ele.id}}" class="btn btn-purple"> <h5>Delete</h5> </a></td>
+                </tr>                 
+                                                       
+             </tr>                            
+         </tbody>  
+     </table>
+     </div>
+
+
+<!-- <li>    <b>Name:</b> {{ patient.patient_name }}</li>
+<li> <b>Blood group:</b>{{patient.blood_group}}</li>
+<li> <b>Gender:</b>{{patient.sex}}</li>
+<li> <b>Department:</b>{{patient.department}}</li>
+<li> <b>Doctor:</b>{{patient.asigned_doctor}}</li> --> 
+
+{% endblock content %}
